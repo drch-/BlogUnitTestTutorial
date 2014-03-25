@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Xv.Blog.Post>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Recent Posts</h2>
+
+
+@foreach (var post in Model)
+{
+    <div><strong>@post.Category.Name</strong> - @Html.ActionLink(post.Title, "Post", new { id = post.Id }) @post.DatePublished.ToShortDateString()</div>
+}
+

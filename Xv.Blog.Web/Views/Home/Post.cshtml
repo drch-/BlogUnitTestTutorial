@@ -1,0 +1,5 @@
+﻿@model Xv.Blog.Post
+
+<h2>@Model.Title</h2>
+<p>Posted @Model.DatePublished.ToShortDateString()</p>
+@Html.Raw(Model.Body)
