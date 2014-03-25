@@ -3,7 +3,11 @@
     using System.Data.Entity;
     using Xv.Blog.Model;
 
-    public class SubscriberRepository : BaseRepository<Subscriber>
+    public interface ISubscriberRepository : IBaseRepository<Subscriber>
+    {
+    }
+
+    public class SubscriberRepository : BaseRepository<Subscriber>, ISubscriberRepository
     {
         public SubscriberRepository()
             : this(new BlogContext())

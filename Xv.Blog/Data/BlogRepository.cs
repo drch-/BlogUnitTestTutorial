@@ -4,7 +4,11 @@
     using System.Linq;
     using Xv.Blog.Model;
 
-    public class PostRepository : BaseRepository<Post>
+    public interface IPostRepository : IBaseRepository<Post>
+    {
+    }
+
+    public class PostRepository : BaseRepository<Post>, IPostRepository
     {
         public PostRepository()
             : this(new BlogContext())
@@ -26,7 +30,7 @@
 
         public IQueryable<Post> GetPublishedPosts()
         {
-            return this.Find(x => x.DatePublished >= DateTime.UtcNow);
+            return this.Find(x => x.DatePublished <= DateTime.UtcNow);
         }
     }
 }

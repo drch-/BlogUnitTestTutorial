@@ -6,7 +6,21 @@ namespace Xv.Blog.Data
     using System.Linq.Expressions;
     using Xv.Blog.Model;
 
-    public abstract class BaseRepository<T>
+    public interface IBaseRepository<T>
+        where T : BaseEntity
+    {
+        T GetById(int id);
+
+        IQueryable<T> All();
+
+        IQueryable<T> Find(Expression<Func<T, bool>> predicate);
+
+        void Add(T entity);
+
+        int SaveChanges();
+    }
+
+    public abstract class BaseRepository<T> : IBaseRepository<T>
         where T : BaseEntity
     {
         protected BaseRepository(BlogContext ctx)
