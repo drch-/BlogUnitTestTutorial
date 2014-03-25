@@ -5,6 +5,9 @@
     using System.Linq;
     using System.Net.Mail;
 
+    using Xv.Blog.Data;
+    using Xv.Blog.Model;
+
     public class BlogService
     {
         private readonly PostRepository postRepository;

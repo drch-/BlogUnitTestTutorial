@@ -1,7 +1,7 @@
-﻿namespace Xv.Blog
+﻿namespace Xv.Blog.Model
 {
     using System;
-
+    
     public class Post : BaseEntity
     {
         public string Title { get; set; }

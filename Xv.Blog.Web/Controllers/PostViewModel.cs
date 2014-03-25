@@ -1,6 +1,7 @@
 ﻿namespace Xv.Blog.Web.Controllers
 {
     using System.Collections.Generic;
+    using Xv.Blog.Model;
 
     public class PostViewModel
     {

@@ -1,9 +1,10 @@
-namespace Xv.Blog
+namespace Xv.Blog.Data
 {
     using System;
     using System.Data.Entity;
     using System.Linq;
     using System.Linq.Expressions;
+    using Xv.Blog.Model;
 
     public abstract class BaseRepository<T>
         where T : BaseEntity

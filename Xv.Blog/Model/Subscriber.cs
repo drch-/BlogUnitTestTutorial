@@ -1,4 +1,4 @@
-﻿namespace Xv.Blog
+﻿namespace Xv.Blog.Model
 {
     public class Subscriber : BaseEntity
     {

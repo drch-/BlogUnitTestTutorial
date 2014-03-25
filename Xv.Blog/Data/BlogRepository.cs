@@ -1,7 +1,8 @@
-﻿namespace Xv.Blog
+﻿namespace Xv.Blog.Data
 {
     using System;
     using System.Linq;
+    using Xv.Blog.Model;
 
     public class PostRepository : BaseRepository<Post>
     {

@@ -1,4 +1,4 @@
-namespace Xv.Blog
+namespace Xv.Blog.Data
 {
     using System;
     using System.Linq;

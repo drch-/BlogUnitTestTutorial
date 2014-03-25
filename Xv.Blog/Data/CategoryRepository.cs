@@ -1,6 +1,7 @@
-﻿namespace Xv.Blog
+﻿namespace Xv.Blog.Data
 {
     using System.Data.Entity;
+    using Xv.Blog.Model;
 
     public class CategoryRepository : BaseRepository<Category>
     {

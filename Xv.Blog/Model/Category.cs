@@ -1,7 +1,7 @@
-namespace Xv.Blog
+namespace Xv.Blog.Model
 {
     using System.Collections.Generic;
-
+    
     public class Category : BaseEntity
     {
         private ISet<Post> posts; 

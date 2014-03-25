@@ -1,6 +1,5 @@
 ﻿namespace Xv.Blog.Tests
 {
-    using System;
     using NUnit.Framework;
 
     [TestFixture]

@@ -5,14 +5,17 @@ namespace Xv.Blog.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    public sealed class Configuration : DbMigrationsConfiguration<Xv.Blog.BlogContext>
+    using Xv.Blog.Data;
+    using Xv.Blog.Model;
+
+    public sealed class Configuration : DbMigrationsConfiguration<BlogContext>
     {
         public Configuration()
         {
             this.AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(Xv.Blog.BlogContext context)
+        protected override void Seed(BlogContext context)
         {
             if (!context.Posts.Any())
             {
